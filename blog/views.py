@@ -13,3 +13,7 @@ def mi_template(request):
     # return HttpResponse(render)
 
     return render(request, 'mi_template.html', {})
+
+def publicaciones(request):
+
+    return render(request, 'publicaciones.html')

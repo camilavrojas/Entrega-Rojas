@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
-</head>
-<body>
-    <h1>titulo blabla</h1>
-    <p>
-       <ul>
-            {% for objeto in lista_objeto %}
-            <li>objeto.nombre</li>          
-            {% endfor %}
-       </ul>
-    </p>
+{% extends 'base.html' %}
 
-    
-</body>
-</html>
+{% block title %}
+<title>
+    coso
+</title>
+{% endblock title %}
+
+{% block texto_h1 %}
+<div class="site-heading">
+    <h1>Titulo del template</h1>
+    <span class="subheading">Bienvenido/a a nuestro template</span>
+</div>
+{% endblock texto_h1 %}
