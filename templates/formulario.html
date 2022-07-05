@@ -1,17 +1,40 @@
 {% extends 'base.html' %}
 
 {% block title %}
-<title>Publicaciones</title>
+<title>Crear</title>
 {% endblock title %}
 
 {% block  texto_h1 %}
     <div class="site-heading">
-        <h1>Publicaciones</h1>
+        <h1>Crea una publicación</h1>
         <span class="subheading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit pariatur veritatis itaque architecto corporis sint! Magnam pariatur sit provident nostrum officiis culpa ex inventore assumenda. Dolores consequatur labore at nisi.</span>
     </div>
 {% endblock texto_h1 %}
 
 {% block post_header %}
+
+<p>
+
+    <form action={% url 'formulario' %} method="post">
+        {% csrf_token %}
+        {% comment %} 
+        <p>
+            Título:
+            <input type="text" name="titulo">
+        </p>
+        <p>
+            <textarea name="contenido" id="" cols="30" rows="10"></textarea>
+        </p>
+        {% endcomment %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <button>Crear</button>
+    </form>
+
+</p>
+
+
 <article class="mb-4">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">

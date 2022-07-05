@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>
+Publicaciones
+</title>
+{% endblock title %}
+
+{% block texto_h1 %}
+<div class="site-heading">
+    <h1>Publicaciones</h1>
+    <span class="subheading">Bienvenido/a a nuestro template</span>
+</div>
+{% endblock texto_h1 %}
+
+{% block post_header %}
+
+<p>
+    <form action={% url 'publicaciones' %}>
+        {{form}}
+        <button>Buscar</button>
+
+    </form>
+</p>
+
+<p>
+    {% if publicaciones %}
+    <ul>
+        {% for publicacion in publicaciones %}
+        <li>{{publicacion}}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    No se encontraron datos.
+    {% endif %}
+</p>
+
+<p>
+    <a href={% url 'formulario' %}>Crear Publicación</a>
+</p>
+
+{% endblock post_header %}
+
