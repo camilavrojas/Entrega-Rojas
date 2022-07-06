@@ -8,6 +8,9 @@ from datetime import datetime
 def inicio(request):
     return render(request, 'index.html')
 
+def acerca(request):
+    return render(request, 'acerca.html')
+
 
 def crear_publicacion(request):
     if request.method == 'POST':

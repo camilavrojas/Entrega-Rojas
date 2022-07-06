@@ -55,7 +55,8 @@ ROOT_URLCONF = 'MVTCamilaRojas.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'C:\Users\camila\OneDrive\Documents\MVT-CamilaRojas\templates'],
+        'DIRS': [BASE_DIR.resolve() / 'templates'],
+        # 'DRS': [r'C:\Users\camila\OneDrive\Documents\MVT-CamilaRojas\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
